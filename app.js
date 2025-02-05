@@ -24,7 +24,7 @@ function verificarIntento() {
   //console.lo(numeroDeUsuario === numeroSecreto);
   if(numeroDeUsuario === numeroSecreto){
     //asignarTextoElemento ('p','Acertaste el nùmero');
-    asignarTextoElemento ('p',ˋAcertaste el nùmero en ${intentos} ${intentos ===1} ? 'vez' : 'veces')ˋ); 
+    asignarTextoElemento ('p',ˋAcertaste el nùmero en ${intentos} ${intentos ===1} ? 'vez' : 'veces'ˋ); 
  document.getElementById ('reiniciar').removeAttribute('disabled');
   } else {
     //El usuario no acertò
@@ -41,13 +41,14 @@ function verificarIntento() {
 function limpiarCaja() {
   //let valorCaja = document.querySelector ('#valorUsuario')
   document.querySelector ('#valorUsuario').value= '';
-  //valorCaja.value = '';
+}
+//valorCaja.value = '';
 function generaNumeroSecreto() {
   return Math.floor(Math.random()*10)1;
 }
 //asignarTextoElemento('h1','Juego del nùmero secreto');
 //asignarTextoElemento('p','Indica un nùmero del 1 al 10');
-  function condicionesIniciales();{
+  function condicionesIniciales() {
     asignarTextoElemento('h1','Juego del nùmero secreto');
     asignarTextoElemento('p','Indica un nùmero del 1 al 10');
     numeroSecreto = generarNumeroSecreto();
