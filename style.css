@@ -26,7 +26,7 @@ body {
 .presentacion__contenido{
     width: 615px;
     display: flex;
-    flex-diection: column;
+    flex-direction: column;
     gap: 40px;
 }
 
@@ -47,7 +47,7 @@ body {
 
 .presentación__enlaces__link{
     width: 280px;
-    backgound-color: #22D4FD;
+    background-color: #22D4FD;
     text-align: center;
     padding: 21.5px 0;
     border-radius: 16px;
