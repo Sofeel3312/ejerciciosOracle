@@ -1,3 +1,67 @@
+//Alert y prompt
+//let mensajeDeBienvenida = 'Bienvenido a la aplicación';
+//alert(mensajeDeBienvenida);
 
-  
+//Cambiando el valor de las variables
+//lert('Bienvenidos al juego del número secreto');
+//let eleccion = prompt('Elige un número entre 1 y 10')
+//Se puede utilizar un Math.random para cambiar el número secreto
+//let numeroSecreto = 4;
+//if (eleccion == numeroSecreto) {
+    //alert('Adivinaste');
+//}
+
+//¿Dónde está el error?
+//let contraseniaDelSistema = "contraseniaPrueba!";
+//let contrasenia = prompt("Ingrese la contraseña del sistema:");
+//if (contrasenia == contraseniaDelSistema){
+   // alert("Acceso al sistema garantizado");
+//}
+
+//Edad mínima para conducir
+//let edad = prompt("Ingrese su edad:");
+
+//if (edad >= 18) {
+  //console.log("Eres mayor de edad.");
+//} else {
+  //console.log("Eres menor de edad.");
+//}
+
+//Cambiando el mensaje alert
+//alert('Bienvenido al juego del número secreto');
+//let intento = prompt('Elige un número entre 1 y 10');
+//let numeroSecreto = 4;
+//console.log(intento  == numeroSecreto);
+//if (intento  == numeroSecreto) {
+    //alert('Acertaste');
+//} else {
+    //alert('El número secreto era ' + numeroSecreto + ', pero elegiste ' + intento);
+//}
+
+//Trabajando con condicionales
+
+//const numero = prompt("Introduce un número:");
+//if (numero > 0) {
+  //console.log("El número es positivo");
+//} else if (numero < 0) {
+  //console.log("El número es negativo");
+//} else {
+  //console.log("El número es cero");
+//}
+
+//Haga lo que hicimos en aula: console.log
+//alert('Bienvenido al juego del número secreto');
+// Agrega un console.log para verificar el valor de "intento" después de la entrada del usuario
+//let intento = prompt('Elige un número entre 1 y 10');
+//console.log('Valor de intento:', intento);
+//let numeroSecreto = 4;
+// Agrega un console.log para verificar la comparación entre "intento" y "numeroSecreto"
+//console.log('Resultado de la comparación:', intento == numeroSecreto);
+//if (intento == numeroSecreto) {
+    //alert('Adivinaste');
+//} else {
+    // Agrega un console.log para verificar el valor de "numeroSecreto" cuando el jugador se equivoca
+  //  console.log('Valor del número secreto:', numeroSecreto);
+    //alert('El número secreto era ' + numeroSecreto);
+//}
 
