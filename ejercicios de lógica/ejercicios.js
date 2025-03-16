@@ -115,3 +115,15 @@ while (intentos < 5) {
 //Números aleatorios
 //let numeroAleatorio1a3 = parseInt(Math.random() * 3) + 1;
 
+//Manipulando contenido HTML con JavaScript
+/*let titulo = document.querySelector('h1')
+titulo.innerHTML = 'Bienvenido al mundo dev'
+*/
+
+//Función onclick
+/*<button onclick="alertFunction()">Haz clic aquí</button> para html*/
+/*
+function alertFunction() {
+  alert("¡Hola, has hecho clic en el botón!");
+}
+*/
