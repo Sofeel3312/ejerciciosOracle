@@ -127,3 +127,7 @@ function alertFunction() {
   alert("¡Hola, has hecho clic en el botón!");
 }
 */
+
+//Trabajando con DOM
+let h2 = document.querySelector('h2');
+h2.innerHTML = 'Has agregado una nueva canción!';
