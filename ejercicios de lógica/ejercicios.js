@@ -81,15 +81,37 @@ while (contador < 4) {
 */
 
 //Bucle Infinito
-let cantidadNumeros = prompt('Ingrese la cantidad de números para el cálculo del promedio:');
+/*let cantidadNumeros = prompt('Ingrese la cantidad de números para el cálculo del promedio:');
 let suma = 0;
 let contador = cantidadNumeros;
 
 while(contador > 0){
     let numero = parseInt(prompt('Ingrese el numero:'));
     suma += numero;
+    contador--;
 }
 
 let promedio = suma / cantidadNumeros;
 
 console.log(promedio);
+*/
+
+//Solo 5 intentos
+/*let numeroSecreto = Math.floor(Math.random() * 10);
+let intentos = 0;
+while (intentos < 5) {
+  let intento = parseInt(prompt("Ingrese un número del 0 al 9:"));
+  intentos++;
+  if (intento == numeroSecreto) {
+    alert(`¡Eso es! Descubriste el número secreto ${numeroSecreto}`);
+    break;
+  }
+}
+  */
+
+//Refactorizando
+//let palabraPersona = cantidadPersonas == 1 ? "persona" : "personas";
+
+//Números aleatorios
+//let numeroAleatorio1a3 = parseInt(Math.random() * 3) + 1;
+
