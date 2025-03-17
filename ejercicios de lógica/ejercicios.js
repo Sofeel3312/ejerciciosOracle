@@ -118,16 +118,85 @@ while (intentos < 5) {
 //Manipulando contenido HTML con JavaScript
 /*let titulo = document.querySelector('h1')
 titulo.innerHTML = 'Bienvenido al mundo dev'
-*/
-
 //Función onclick
-/*<button onclick="alertFunction()">Haz clic aquí</button> para html*/
-/*
+//<button onclick="alertFunction()">Haz clic aquí</button>
 function alertFunction() {
   alert("¡Hola, has hecho clic en el botón!");
 }
-*/
-
 //Trabajando con DOM
 let h2 = document.querySelector('h2');
-h2.innerHTML = 'Has agregado una nueva canción!';
+h2.innerHTML = 'Has agregado una nueva canción!';*/
+
+//Función que verifica números
+/*function verificarNumero(numero) {
+    if (numero > 0) {
+      console.log("El número es positivo.");
+    } else if (numero < 0) {
+      console.log("El número es negativo.");
+    } else {
+      console.log("El número es zero.");
+    }
+  }
+    */
+
+  //Calculadora de promedio y situación del alumno
+/*function calcularPromedio(nota1, nota2, nota3, nota4){
+    let promedio = (nota1 +  nota2 +  nota3 +  nota4)/4;
+    return promedio;
+}
+function verificarAprobacion(promedio){
+    return promedio >= 5 ? "Aprobado" : "Reprobado";
+}
+let nota1 = 7;
+let nota2 = 6;
+let nota3 = 3;
+let nota4 = 5;
+*/
+
+//Adapta función
+//ejercicio 1
+/*function calcularDobleTriple(numero) {
+    const doble = numero * 2;
+    const triple = numero * 3;
+  
+    return `El doble de ${numero} es ${doble} y el triple es ${triple}.`;
+  }
+  
+  const numero = 5;
+  const resultado = calcularDobleTriple(numero);
+  console.log(resultado);
+  //ejercicio 2
+  function calcularDoble(numero) {
+    return numero * 2;
+  }
+  function calcularTriple(numero) {
+    return numero * 3;
+  }
+  const numero = 5;
+  const doble = calcularDoble(numero);
+  const triple = calcularTriple(numero);
+  console.log(`El doble de ${numero} es ${doble} y el triple es ${triple}.`);
+  */
+
+  //Manipulación de listas en JS
+/*  let listaCompras = [];
+
+listaCompras.push("Manzana");
+listaCompras.push("Arroz");
+listaCompras.push("Leche");
+listaCompras.push("Pan");
+listaCompras.push("Carne");
+console.log(listaCompras);
+*/
+
+//Sorteando libros
+/*function sortearLibro() {
+    let libroElegido = parseInt(Math.random() * numeroLimite + 1);
+    let cantidadDeLibrosSorteados = listaDeLibrosSorteados.length;
+    if (cantidadDeLibrosSorteados == numeroLimite) {
+        listaDeLibrosSorteados = [];
+    }
+    // Código omitido
+}
+*/
+

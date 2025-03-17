@@ -176,4 +176,229 @@ console.log(numeroAleatorio);
 */
 
     //Desafíos 5
+//Crear una función que muestre "¡Hola, mundo!" en la consola.
+/*function mensaje(){
+console.log ('¡Hola mundo!');
+}
+mensaje();
+*/
+
+//Crear una función que reciba un nombre como parámetro y muestre "¡Hola, [nombre]!" en la consola.
+/*function mostrarNombre(nombre) {
+    console.log(`¡Hola, ${nombre}!`);
+}
+mostrarNombre('Fernanda');
+*/
+
+//Crear una función que reciba un número como parámetro y devuelva el doble de ese número.
+/*function calcularDoble(numero) {
+    return numero * 2;
+  }
+  let resultadoDoble = calcularDoble(5);
+  console.log(resultadoDoble);
+  */
+
+//Crear una función que reciba tres números como parámetros y devuelva su promedio.
+  /*function calcularPromedio (a, b, c) {
+    return (a + b + c) / 3;
+  }
+  let promedio = calcularPromedio(4,7,10);
+  console.log(promedio);
+  */
+
+//Crear una función que reciba dos números como parámetros y devuelva el mayor de ellos.
+  /*function numeroMayor(a, b) {
+    return a > b ? a : b;
+  }
+  let mayor = numeroMayor(15,7);
+  console.log(mayor);
+  */
+
+//Crear una función que reciba un número como parámetro y devuelva el resultado de multiplicar ese número por sí mismo.
+  /*function numeroMultiplicado (numero) {
+    return numero * numero;
+  }
+  let resultado = numeroMultiplicado(5);
+  console.log(resultado);
+  */
+
+      //Desafíos 6
+//Crea una función que calcule el índice de masa corporal (IMC) de una persona a partir de su altura en metros y peso en kilogramos, que se recibirán como parámetros.
+/*function calcularIMC (altura, peso) {
+let IMC = peso / (altura*altura);
+return IMC; 
+}
+*/
+
+//Crea una función que calcule el valor del factorial de un número pasado como parámetro.
+/*
+function calcularFactorial(numero) {
+  if (numero === 0 || numero === 1) {
+    return 1;
+  } else {
+    return numero * calcularFactorial(numero - 1);
+  }
+}
+// Ejemplo de uso
+let numero = 5;
+let resultado = calcularFactorial(numero);
+console.log(`El factorial de ${numero} es ${resultado}`);
+*/
+
+//Crea una función que convierta un valor en dólares, pasado como parámetro, y devuelva el valor equivalente en reales. Para esto, considere la cotización del dólar igual a R$4,80.
+/*function convertirDolaresAReales(dolares) {
+    var cotizacionDolar = 4.80;
+    var reales = dolares * cotizacionDolar;
+    return reales;
+  }
+  // Ejemplo de uso
+  let valorEnDolar = 50;
+  let valorEnReales = convertirDolaresAReales(valorEnDolar);
+  console.log(`${valorEnDolar} dólares  es R$ ${valorEnReales}`);
+  */
+
+  //Crea una función que muestre en pantalla el área y el perímetro de una sala rectangular, utilizando la altura y la anchura que se proporcionarán como parámetros.
+  /*function calcularAreaYPerimetroRectangular(altura, anchura) {
+    var area = altura * anchura;
+    var perimetro = 2 * (altura + anchura);
+    console.log("Área: " + area);
+    console.log("Perímetro: " + perimetro);
+  }
+  // Ejemplo de uso
+  let altura = 3; // en metros
+  let anchura = 5; // en metros
+  calcularAreaYPerimetroRectangular(altura, anchura);
+  */
+
+  //Cree una función que muestre en pantalla el área y el perímetro de una sala circular, utilizando su radio que se proporcionará como parámetro. Considere Pi = 3,14.
+  /*function calcularAreaYPerimetroCircular(radio) {
+    var pi = 3.14;
+    var area = pi * radio * radio;
+    var perimetro = 2 * pi * radio;
+    console.log("Área: " + area);
+    console.log("Perímetro: " + perimetro);
+  }
+  // Ejemplo de uso
+  let radio = 4; // en metros
+  calcularAreaYPerimetroCircular(radio);
+  */
+
+  //Cree una función que muestre en pantalla la tabla de multiplicar de un número dado como parámetro.
+  /*function mostrarTablaDeMultiplicar(numero) {
+    for (var i = 1; i <= 10; i++) {
+      var resultado = numero * i;
+      console.log(numero + " x " + i + " = " + resultado);
+    }
+  }
+  // Ejemplo de uso
+  let numero = 7;
+  mostrarTablaDeMultiplicar(numero);
+  */
+
+    //Desafíos 7
+//Crea una lista vacía llamada "listaGenerica".
+/*let listaGenerica = [];*/
+
+//Crea una lista de lenguajes de programación llamada "lenguagesDeProgramacion con los siguientes elementos: 'JavaScript', 'C', 'C++', 'Kotlin' y 'Python'.
+/*let lenguajesProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'] ;
+//Agrega a la lista "lenguagesDeProgramacion los siguientes elementos: 'Java', 'Ruby' y 'GoLang'.
+lenguajesProgramacion.push('Java', 'Ruby', 'GoLang');
+console.log(lenguajesProgramacion);
+//Crea una función que muestre en la consola todos los elementos de la lista "lenguagesDeProgramacion.
+function mostrarLenguajesSeparadamente() {
+    for (let i = 0; i < lenguajesProgramacion.length; i++) {
+      console.log(lenguajesProgramacion[i]);
+    }
+  }
+  mostrarLenguajesSeparadamente();
+//Crea una función que muestre en la consola todos los elementos de la lista "lenguagesDeProgramacion en orden inverso.
+function mostrarLenguajesReversoSeparadamente() {
+    for (let i = lenguajesProgramacion.length - 1; i >= 0; i--) {
+      console.log(lenguajesProgramacion[i]);
+    }
+  }
+  
+  mostrarLenguajesReversoSeparadamente();
+*/
+
+//Crea una función que calcule la media de los elementos en una lista de números.
+/*function calcularMedia(lista) {
+    let suma = 0;
+    for (let i = 0; i < lista.length; i++) {
+      suma += lista[i];
+    }
+    return suma / lista.length;
+  }
+  
+  let numeros = [10, 20, 30, 40, 50];
+  let media = calcularMedia(numeros);
+  console.log('Média:', media);
+  */
+
+//Crea una función que calcule el promedio de los elementos en una lista de números.
+/*function encontrarMayorMenor(lista) {
+    let mayor = lista[0];
+    let menor = lista[0];  
+    for (let i = 1; i < lista.length; i++) {
+      if (lista[i] > mayor) {
+        mayor = lista[i];
+      }
+      if (lista[i] < menor) {
+        menor = lista[i];
+      }
+    }  
+    console.log('Mayor:', mayor);
+    console.log('Menor:', menor);
+  }  
+  let numeros = [15, 8, 25, 5, 12];
+  encontrarMayorMenor(numeros);
+*/
+
+//Crea una función que retorne la suma de todos los elementos en una lista.
+/*function calcularSuma(lista) {
+    let suma = 0;
+    for (let i = 0; i < lista.length; i++) {
+      suma += lista[i];
+    }
+    return suma;
+  }
+  
+  let numeros = [15, 8, 25, 5, 12];
+  let suma = calcularSuma(numeros);
+  console.log('Suma:', suma);
+  */
+
+  //Crea una función que reciba una lista como parámetro y retorne el índice de un elemento también pasado como parámetro. Si ese elemento no existe en la lista, retorna -1.
+  /*function encontrarIndiceElemento(lista, elemento) {
+    for (let i = 0; i < lista.length; i++) {
+      if (lista[i] === elemento) {
+        return i; // Retorna el índice del elemento encontrado
+      }
+    }
+    return -1; // Retorna -1 si el elemento no se encuentra en la lista
+  }
+  */
+
+//Crea una función que reciba dos listas de números del mismo tamaño y devuelva una nueva lista con la suma de los elementos uno a uno.
+/*function sumarListas(lista1, lista2) {
+    return lista1.map((num, index) => num + lista2[index]);
+}
+
+const lista1 = [1, 2, 3];
+const lista2 = [4, 5, 6];
+const resultado = sumarListas(lista1, lista2);
+console.log(resultado);  
+*/
+
+//Crea una función que reciba una lista de números y devuelva una nueva lista con el cuadrado de cada número.
+/*function cuadradoLista(lista) {
+    return lista.map(num => num ** 2);
+}
+
+const lista = [2, 3, 4];
+const resultado = cuadradoLista(lista);
+console.log(resultado);  
+*/
+
+
 
