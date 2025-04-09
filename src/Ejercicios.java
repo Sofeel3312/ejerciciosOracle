@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-//public class Ejercicios {
-//    public static void main(String[] args) {
+public class Ejercicios {
+    public static void main(String[] args) {
 //        double temperaturaEnCelsius = 30.4;
 //        double temperaturaEnFahrenheit = (temperaturaEnCelsius * 1.8) + 32;
 //
@@ -11,8 +11,8 @@ import java.util.Scanner;
 //
 //        int temperaturaEnFahrenheitEntero = (int) temperaturaEnFahrenheit;
 //        System.out.println("La temperatura en Fahrenheit entera es: " + temperaturaEnFahrenheitEntero);
-//        }
-//    }
+        }
+    }
 //                Scanner scanner = new Scanner(System.in);
 //
 //                System.out.print("Digite su nombre: ");
