@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tablero Institucional</title>
+  <link rel="stylesheet" href="../PAT/PAT.css">
+</head>
+<body>
+  <!-- 🟫 Menú lateral institucional -->
+  <aside class="menu-lateral">
+    <h1 class="menu-titulo">Menú principal</h1>
+    <ul id="menuLateral">
+      <!-- Este menú se llenará con JavaScript según el usuario -->
+    </ul>
+  </aside>
+
+  <!-- 🟨 Encabezado superior con nombre y cerrar sesión -->
+<header class="barra-superior">
+  <h2 id="bienvenidaHeader">Bienvenido</h2>
+  <button onclick="cerrarSesion()" class="btn-close">Cerrar sesión 🔒</button>
+</header>
+
+  <!-- 🟦 Panel central con mensaje y botones -->
+  <main class="contenedor">
+    <section class="panel-central">
+      <p id="mensajeUnidad">Aquí puedes consultar tus módulos y reportes personalizados.</p>
+    </section>
+
+    <section class="top-bar" id="botonesUnidad">
+      <!-- Botones solo visibles para el administrador -->
+    </section>
+  </main>
+
+  <!-- 🔧 Script dinámico de personalización -->
+  <script>
+  window.addEventListener("DOMContentLoaded", function() {  
+    const usuario = sessionStorage.getItem("usuarioActivo");
+    const nombreUnidad = sessionStorage.getItem("nombreUnidad");
+
+    const descripciones = {
+      "Inicio": "Retorna",
+      "Archivos actualizados": "Descarga de archivos y consultas",
+      "Dashboard": "Inhabilitado, solo para consultas",
+      "Anexo Estadístico": "Carga tu información aquí",
+      "Informe Escrito": "Carga tu información aquí",
+      "PAT": "Carga tu información aquí",
+      "Indicadores": "Inhabilitado, solo para consultas",
+      "Calendario": "Cronograma anual y eventos institucionales",
+      "Comunicados": "Capacitaciones y formación",
+};
+
+    const datos = {
+      salud: {
+        menu: ["Inicio", "Archivos actualizados", "Dashboard", "Anexo Estadístico", "Informe Escrito", "PAT", "Indicadores", "Calendario", "Comunicados"],
+        mensaje: "Este es tu tablero personalizado. Aquí puedes consultar tus archivos, indicadores y reportes."
+      },
+      finanzas: {
+        menu: ["Inicio", "Archivos actualizados", "Dashboard", "Anexo Estadístico", "Informe Escrito", "PAT", "Indicadores", "Calendario", "Comunicados"],
+        mensaje: "Este es tu tablero personalizado. Aquí puedes consultar tus archivos, indicadores y reportes."
+      },
+      admin: {
+        menu: ["Inicio", "Archivos actualizados", "Dashboard", "Anexo Estadístico", "Informe Escrito", "PAT", "Indicadores", "Calendario", "Comunicados"],
+        mensaje: "Modo administrador activo. Puedes acceder a todas las unidades y gestionar el sistema."
+      },
+      calidad: {
+        menu: ["Inicio", "Archivos actualizados", "Dashboard", "Anexo Estadístico", "Informe Escrito", "PAT", "Indicadores", "Calendario", "Comunicados"],
+        mensaje: "Este es tu tablero personalizado. Aquí puedes consultar tus archivos, indicadores y reportes."
+      },
+      comunitaria: {
+        menu: ["Inicio", "Archivos actualizados", "Dashboard", "Anexo Estadístico", "Informe Escrito", "PAT", "Indicadores", "Calendario", "Comunicados"],
+        mensaje: "Este es tu tablero personalizado. Aquí puedes consultar tus archivos, indicadores y reportes."
+      },
+      infraestructura: {
+        menu: ["Inicio", "Archivos actualizados", "Dashboard", "Anexo Estadístico", "Informe Escrito", "PAT", "Indicadores", "Calendario", "Comunicados"],
+        mensaje: "Este es tu tablero personalizado. Aquí puedes consultar tus archivos, indicadores y reportes."
+      },
+      juridico: {
+        menu: ["Inicio", "Archivos actualizados", "Dashboard", "Anexo Estadístico", "Informe Escrito", "PAT", "Indicadores", "Calendario", "Comunicados"],
+        mensaje: "Este es tu tablero personalizado. Aquí puedes consultar tus archivos, indicadores y reportes."
+      },
+      planeacion: {
+        menu: ["Inicio", "Archivos actualizados", "Dashboard", "Anexo Estadístico", "Informe Escrito", "PAT", "Indicadores", "Calendario", "Comunicados"],
+        mensaje: "Este es tu tablero personalizado. Aquí puedes consultar tus archivos, indicadores y reportes."
+      }, 
+      transparencia: {
+        menu: ["Inicio", "Archivos actualizados", "Dashboard", "Anexo Estadístico", "Informe Escrito", "PAT", "Indicadores", "Calendario", "Comunicados"],
+        mensaje: "Este es tu tablero personalizado. Aquí puedes consultar tus archivos, indicadores y reportes."
+      }
+    };
+    
+    //Validacion de acceso
+    if (!usuario || !datos[usuario]) {
+      alert("Acceso no autorizado");
+      window.location.href = "../accesoUsuario/PAT-accesoUsuario.html";
+      return;
+    }
+
+    //saludo institucional
+    document.getElementById("bienvenidaHeader").textContent = `Bienvenido, ${nombreUnidad}`;
+    document.getElementById("mensajeUnidad").textContent = datos[usuario].mensaje;
+
+// 🔗 Menú lateral con íconos dinámicos
+    const iconos = {
+      "Inicio": "🏠",
+      "Archivos actualizados": "📁",
+      "Dashboard": "📊",
+      "Anexo Estadístico": "📈",
+      "Informe Escrito": "📝",
+      "PAT": "🎯",
+      "Indicadores": "📈",
+      "Calendario": "📅",
+      "Comunicados": "📢",
+    };
+
+    const menu = document.getElementById("menuLateral");
+    datos[usuario].menu.forEach(opcion => {
+      const li = document.createElement("li");
+      const icono = iconos[opcion] || "📄";
+
+      const enlace = document.createElement("a");
+      enlace.href = "#";
+      enlace.innerHTML = `<span class="icono">${icono}</span>${opcion}`;
+      enlace.setAttribute("data-tooltip", descripciones[opcion] || `Ir a ${opcion}`);
+
+      li.appendChild(enlace);
+      menu.appendChild(li);
+});
+
+
+  // 🔐 Botones exclusivos para administrador
+  if (usuario === "admin") {
+    const botones = document.getElementById("botonesUnidad");
+    const unidades = Object.keys(datos).filter(u => u !== "admin");
+    unidades.forEach(u => {
+      const btn = document.createElement("button");
+      btn.className = "btn-admin";
+      btn.textContent = datos[u].menu[1]; // ejemplo: "Presupuesto"
+      btn.onclick = () => alert(`Accediendo a módulo de ${datos[u].menu[1]}`);
+      botones.appendChild(btn);
+    });
+  }
+
+  // 🔚 Cierre de sesión seguro
+  window.cerrarSesion = function () {
+    sessionStorage.clear();
+    window.location.href = "../PAT/accesoUsuario/PAT-accesoUsuario.html";
+  };
+});
+</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,306 @@
+/* === BASE GENERAL === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #2c1a1a;
+}
+
+/* === MENÚ LATERAL === */
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: #ececec;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  z-index: 998
+}
+
+.menu-lateral h1 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #3a1f1f;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  padding-top: 40px; /*sube o baja este valor*/
+}
+
+.menu-lateral li {
+  margin-bottom: 12px;
+}
+
+.menu-lateral a {
+  text-decoration: none;
+  color: #3a1f1f;
+  font-weight: bold;
+  padding: 6px 12px;
+  display: block;
+  border-radius: 6px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.menu-lateral a.activo {
+  background: #c9b6a4;
+  color: #000;
+  box-shadow: inset 3px 0 0 #8b485c;
+}
+
+
+.menu-lateral a:hover {
+  background: #d6c5a1;
+  transform: scale(1.02);
+}
+
+/* === ENCABEZADO SUPERIOR === */
+.barra-superior {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to right, #ddc9a3, #d6c5a1);
+  padding: 12px 20px 12px 240px; /* deja espacio para el menú lateral */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  z-index: 999;
+}
+
+.barra-superior h2 {
+  font-size: 18px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #3a1f1f;
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+/* === BOTÓN CERRAR SESIÓN === */
+.btn-close {
+  font-size: 14px;
+  padding: 8px 12px;
+  background: #8b485c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-close:hover {
+  background: #5c2e3a;
+  transform: scale(1.05);
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.contenedor {
+  margin-left: 220px;
+  padding: 90px 30px 30px; /* padding-top mayor para que no se tape por el header */
+}
+
+/* === PANEL CENTRAL INFORMATIVO === */
+.panel-central {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.panel-central h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.panel-central p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* === BOTONES DE UNIDAD / ADMINISTRADOR === */
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn-admin {
+  padding: 12px 18px;
+  font-size: 15px;
+  background: linear-gradient(to right, #ddc9a3, #d6c5a1);
+  color: #2c1a1a;
+  border: 1px solid #8b485c;
+  border-radius: 8px;
+  min-width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-admin:hover {
+  background: #e0d0c0;
+  transform: scale(1.03);
+}
+
+@media screen and (max-width: 768px) {
+  .menu-lateral {
+    position: static;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    padding: 10px;
+  }
+
+  .barra-superior {
+    margin-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contenedor {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .btn-admin {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .top-bar {
+    gap: 12px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+  .icono {
+    margin-right: 6px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+  .error-message {
+    color: #E74C3C;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+/* === INICIO DE SESIÓN INSTITUCIONAL === */
+.login-container {
+  width: 380px;
+  max-width: 95%;
+  margin: 60px auto;
+  padding: 40px;
+  background: linear-gradient(to right, #d6c5a1, #ddc9a3);
+  border: 1px solid #b89c7c;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  color: #3a1f1f;
+  text-align: center;
+}
+
+.login-container h2 {
+  font-size: 22px;
+  margin-bottom: 24px;
+  color: #2c1a1a;
+}
+
+.login-container label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #a58c73;
+  border-radius: 8px;
+  background: #fefefe;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.login-container input:focus {
+  outline: none;
+  border-color: #8b485c;
+  background: #fffdf7;
+}
+
+.login-container button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  background: #8b485c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-container button:hover {
+  background: #5c2e3a;
+  transform: scale(1.02);
+}
+
+.error-message {
+  color: #E74C3C;
+  font-size: 14px;
+  margin-top: 16px;
+  font-weight: bold;
+}
+
+
+.barra-superior h2 {
+  font-size: 18px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #3a1f1f;
+}
+
+.menu-lateral a {
+  position: relative;
+}
+
+.menu-lateral a::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 50%;
+  left: 105%;
+  transform: translateY(-50%);
+  background: #3a1f1f;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 13px;
+  white-space: nowrap;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 20;
+}
+
+.menu-lateral a:hover::after {
+  opacity: 1;
+}
+

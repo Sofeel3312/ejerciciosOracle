@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Programa Anual de Trabajo 2025</title>
+  <link rel="stylesheet" href="PAT.css" />
+  <script defer src="PAT.js"></script>
+</head>
+<body>
+  <div class="top-bar">
+    <p id="usuario"></p>
+    <button onclick="cerrarSesion()" class="btn-small">Cerrar Sesión</button>
+    <button onclick="mostrarModalAdmin()" class="btn-small btn-admin">Modo Administrador</button>
+  </div>
+
+  <h1 class="titulo">Programa Anual de Trabajo 2025</h1>
+
+  <div class="contenedor">
+    <form id="formulario">
+      <label>Área:</label>
+      <p id="areaText"></p>
+
+      <label>Indicador:</label>
+      <p id="indicadorText"></p>
+
+      <label>Periodicidad:</label>
+      <p id="periodicidadText"></p>
+
+      <label>Tipo de Meta:</label>
+      <p id="tipoMetaText">Seleccionado desde Administrador</p>
+
+      <label>Trimestre:</label>
+      <p id="trimestreText"></p>
+
+      <label>Meta Programada:</label>
+      <input type="text" id="metaProgramadaUsuario" placeholder="Ingresar valor">
+      <button onclick="agregarMetaUsuario('programada')">Agregar</button>
+
+      <label>Meta Modificada:</label>
+      <input type="text" id="metaModificadaUsuario" placeholder="Ingresar valor">
+      <button onclick="agregarMetaUsuario('modificada')">Agregar</button>
+
+      <label>Meta Alcanzada:</label>
+      <input type="text" id="metaAlcanzadaUsuario" placeholder="Ingresar valor">
+      <button onclick="agregarMetaUsuario('alcanzada')">Agregar</button>
+    </form>
+  </div>
+
+  <!-- Modal de autenticación para modo administrador -->
+  <div id="adminAuth" class="modal">
+    <div class="modal-content">
+      <h2>Acceso al Modo Administrador</h2>
+      <input type="password" id="passwordAdmin" placeholder="Ingrese su contraseña">
+      <button onclick="validarAdministrador()">Entrar</button>
+      <p id="errorMensaje" class="error-message"></p>
+      <span class="close" onclick="cerrarModalAdmin()">&times;</span>
+    </div>
+  </div>
+
+  <!-- Tabla de Metas -->
+  <table id="tablaMetas">
+    <thead>
+      <tr class="encabezado">
+        <th>Indicador</th>
+        <th>Área</th>
+        <th>Periodicidad</th>
+        <th>Tipo</th>
+        <th colspan="4">Metas Programadas</th>
+        <th colspan="4">Metas Modificadas</th>
+        <th colspan="4">Metas Alcanzadas</th>
+      </tr>
+    </thead>
+    <tbody id="cuerpoTabla"></tbody>
+  </table>
+
+</body>
+</html>
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Programa Anual de Trabajo 2025</title>
+  <link rel="stylesheet" href="PAT.css" />
+  <script src="admin.js"></script>
+  <script defer src="PAT.js"></script>
+</head>
+<body>
+  <div class="top-bar">
+    <p id="usuario"></p>
+    <button onclick="cerrarSesion()" class="btn-small">Cerrar Sesión</button>
+    <button onclick="mostrarModalAdmin()" class="btn-small btn-admin">Modo Administrador</button>
+  </div>
+
+  <h1 class="titulo">Programa Anual de Trabajo 2025</h1>
+
+  <div class="contenedor">
+    <form id="formulario">
+
+      <label>Área:</label>
+      <p id="areaText"></p>
+
+      <label>Indicador:</label>
+      <select id="indicadorInput" required>
+        <option disabled selected>Nombre del indicador</option>
+      </select>
+
+      <label>Periodicidad:</label>
+      <p id="periodicidadText"></p>
+
+      <label>Tipo de Meta:</label>
+      <p id="tipoMetaText">Seleccionado desde Administrador</p>
+
+      <label>Trimestre:</label>
+      <p id="trimestreText"></p>
+
+      <label>Meta Programada:</label>
+      <input type="text" id="metaProgramadaUsuario" placeholder="Ingresar valor">
+      <button onclick="agregarMetaUsuario('programada')">Agregar</button>
+
+      <label>Meta Modificada:</label>
+      <input type="text" id="metaModificadaUsuario" placeholder="Ingresar valor">
+      <button onclick="agregarMetaUsuario('modificada')">Agregar</button>
+
+      <label>Meta Alcanzada:</label>
+      <input type="text" id="metaAlcanzadaUsuario" placeholder="Ingresar valor">
+      <button onclick="agregarMetaUsuario('alcanzada')">Agregar</button>
+      </form>
+      </div>
+
+Modal de autenticación para modo administrador 
+ <div id="adminAuth" class="modal">
+  <div class="modal-content">
+    <h2>Acceso al Modo Administrador</h2>
+    <input type="password" id="passwordAdmin" placeholder="Ingrese su contraseña">
+    <button onclick="validarAdministrador()">Entrar</button>
+    <p id="errorMensaje" class="error-message"></p>
+    <span class="close" onclick="cerrarModalAdmin()">&times;</span>
+  </div>
+</div>
+
+Tabla de Metas 
+<table id="tablaMetas">
+  <thead>
+    <tr class="encabezado">
+      <th>Indicador</th>
+      <th>Área</th>
+      <th>Periodicidad</th>
+      <th>Tipo</th>
+      <th colspan="4">Metas Programadas</th>
+      <th colspan="4">Metas Modificadas</th>
+      <th colspan="4">Metas Alcanzadas</th>
+    </tr>
+  </thead>
+  <tbody id="cuerpoTabla"></tbody>
+</table>
+
+</body>
+</html>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Programa Anual de Trabajo 2025</title>
+  <link rel="stylesheet" href="PAT.css" />
+</head>
+<body>
+  <h1>Programa Anual de Trabajo 2025</h1>
+
+  <div class="form-container">
+    <label for="area">Área:</label>
+    <select id="area"></select>
+
+    <label for="indicator">Indicador:</label>
+    <select id="indicator"></select>
+
+    <label for="periodicity">Periodicidad:</label>
+    <select id="periodicity">
+      <option value="Trimestral">Trimestral</option>
+      <option value="Semestral">Semestral</option>
+      <option value="Anual">Anual</option>
+    </select>
+
+    <label for="quarter">Trimestre:</label>
+    <select id="quarter">
+      <option value="1">1</option>
+      <option value="2" disabled>2</option>
+      <option value="3" disabled>3</option>
+      <option value="4" disabled>4</option>
+    </select>
+
+    <label for="value">Valor alcanzado:</label>
+    <input type="number" id="value" placeholder="Ingresar valor" />
+
+    <button id="submitBtn">Agregar Datos</button>
+  </div>
+
+  <div class="result-container">
+    <canvas id="resultChart"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="PAT.js"></script>
+</body>
+</html>
+-->
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programa Anual de Trabajo 2025</title>
+  <link rel="stylesheet" href="PAT.css" />
+  <script defer src="PAT.js"></script>
+</head>
+<body>
+
+  <h1 class="titulo">Programa Anual de Trabajo 2025</h1>
+
+  <div class="contenedor">
+    <form id="formulario">
+      <label>Área:</label>
+      <select id="areaInput" onchange="actualizarIndicadores()" required>
+        <option disabled selected>Área</option>
+        <option value="accion">Coordinación de Acción Comunitaria</option>
+        <option value="calidad">Coordinación de Calidad e Información Estratégica</option>
+        <option value="transparencia">Coordinación de Transparencia y Vinculación</option>
+        <option value="salud">Unidad de Atención a la Salud</option>
+        <option value="juridica">Unidad Jurídica</option>
+        <option value="planeacion">Unidad de Planeación Estratégica y Coordinaciones Estatales</option>
+        <option value="infraestructura">Unidad de Infraestructura</option>
+        <option value="finanzas">Unidad de Administración y Finanzas</option>
+      </select>
+
+      <label>Indicador:</label>
+      <select id="indicadorInput" required>
+        <option disabled selected>Indicador</option>
+      </select>
+
+      <label>Periodicidad:</label>
+      <select id="periodicidadInput" required>
+        <option disabled selected>Periodicidad</option>
+        <option>Trimestral</option>
+        <option>Semestral</option>
+        <option>Anual</option>
+      </select>
+
+      <label>Tipo de Meta:</label>
+      <select id="tipoMeta" required>
+        <option disabled selected>Tipo de Meta</option>
+        <option value="Programada">Programada</option>
+        <option value="Modificada">Modificada</option>
+        <option value="Alcanzada">Alcanzada</option>
+      </select>
+
+      <label>Trimestre:</label>
+      <select id="trimestre" onchange="bloquearTrimestres()" required>
+        <option disabled selected>Trimestre</option>
+        <option value="0">Trimestre 1</option>
+        <option value="1">Trimestre 2</option>
+        <option value="2">Trimestre 3</option>
+        <option value="3">Trimestre 4</option>
+      </select>
+
+      <label>Valor (%):</label>
+      <input
+        type="text"
+        id="valorMeta"
+        placeholder="Solo números"
+        disabled
+        oninput="this.value = this.value.replace(/[^\\d]/g, '')"
+        required
+      />
+
+      <button type="button" onclick="agregarDato()">Agregar</button>
+    </form>
+
+    <button id="btnModoProgramador" onclick="mostrarAdminForm()">Modo Administrador</button>
+    <button onclick="evaluarCumplimiento()">Evaluar Cumplimiento</button>
+  </div>
+
+  <!Modal Modo Administrador
+  <div id="adminForm" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarAdminForm()">&times;</span>
+      <h2>Modo Administrador</h2>
+      <input type="password" id="claveAdmin" placeholder="Contraseña" />
+      <button onclick="activarModoProgramador()">Entrar</button>
+    </div>
+  </div>
+
+  <! Tabla 
+  <table id="tablaMetas">
+    <thead>
+      <tr class="encabezado">
+        <th>Indicador</th>
+        <th>Área</th>
+        <th>Periodicidad</th>
+        <th>Tipo</th>
+        <th colspan="4">Metas Programadas (%)</th>
+        <th colspan="4">Metas Modificadas (%)</th>
+        <th colspan="4">Metas Alcanzadas (%)</th>
+      </tr>
+      <tr class="encabezado">
+        <th colspan="4"></th>
+        <th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th>
+        <th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th>
+        <th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th>
+      </tr>
+    </thead>
+    <tbody id="cuerpoTabla"></tbody>
+  </table>
+
+</body>
+</html>
+-->

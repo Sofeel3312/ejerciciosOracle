@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Administrador</title>
+  <link rel="stylesheet" href="PAT.css">
+</head>
+<body>
+  <div class="barra-superior">
+    <h2>Modo Administrador</h2>
+    <button onclick="cerrarSesion()" class="btn-small btn-close">Cerrar sesión</button>
+  </div>
+
+  <div class="contenedor">
+    <h3>Acceso a todas las unidades</h3>
+    <div class="top-bar">
+      <button class="btn-admin" onclick="irA('salud')">Unidad de Atención a la Salud</button>
+      <button class="btn-admin" onclick="irA('finanzas')">Unidad de Administración y Finanzas</button>
+      <button class="btn-admin" onclick="irA('infraestructura')">Unidad de Infraestructura</button>
+      <button class="btn-admin" onclick="irA('juridica')">Unidad Jurídica</button>
+      <button class="btn-admin" onclick="irA('planeacion')">Unidad de Planeación Estratégica</button>
+      <button class="btn-admin" onclick="irA('comunitaria')">Coordinación de Acción Comunitaria</button>
+      <button class="btn-admin" onclick="irA('transparencia')">Coordinación de Transparencia y Vinculación</button>
+      <button class="btn-admin" onclick="irA('calidad')">Coordinación de Calidad e Información Estratégica</button>
+    </div>
+  </div>
+
+  <script>
+    const usuario = sessionStorage.getItem("usuarioActivo");
+
+    if (usuario !== "admin") {
+      alert("Acceso restringido al modo administrador.");
+      window.location.href = "PAT-accesoUsuario.html";
+    }
+
+    function irA(unidad) {
+      window.location.href = `${unidad}.html`;
+    }
+
+    function cerrarSesion() {
+      sessionStorage.removeItem("usuarioActivo");
+      window.location.href = "PAT-accesoUsuario.html";
+    }
+  </script>
+</body>
+</html>
+

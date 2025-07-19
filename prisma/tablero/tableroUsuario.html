@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>PLADDI</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../componentes/menu-lateral.js" defer></script>
+  <script src="tableroUsuario.js" defer></script>
+</head>
+<body>
+  <aside class="menu-lateral"></aside>
+
+  <!-- 🟨 Barra superior institucional -->
+  <header class="barra-superior">
+    <h2 id="bienvenidaHeader">Bienvenido</h2>
+    <button onclick="cerrarSesion()" class="btn-close">Cerrar sesión 🔒</button>
+  </header>
+
+  <!-- 🟦 Panel central institucional -->
+  <main class="contenedor">
+    <section class="panel-central">
+      <p id="mensajeUnidad">Selecciona un módulo desde el menú lateral para comenzar</p>
+      <div id="contenidoModulo"></div>
+    </section>
+  </main>
+</body>
+</html>
+

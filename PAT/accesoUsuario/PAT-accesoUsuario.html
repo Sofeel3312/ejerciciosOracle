@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso al Programa Anual de Trabajo</title>
+
+  <!-- Enlace al CSS institucional -->
+  <link rel="stylesheet" href="../PAT.css">
+
+  <!-- Enlace al JavaScript de validación -->
+  <script src="PAT-accesoUsuario.js" defer></script>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Acceso al Sistema</h2>
+
+    <form id="loginForm" autocomplete="off">
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" name="usuario" required placeholder="Escribe tu usuario">
+
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" required placeholder="••••••••">
+
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+
+    <p id="mensaje" class="error-message"></p>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+/<!--
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Administrador - PAT 2025</title>
+  <link rel="stylesheet" href="PAT.css" />
+</head>
+<body>
+  <h1>Modo Administrador</h1>
+
+  <div class="form-container">
+    <label for="adminPassword">Contraseña:</label>
+    <input type="password" id="adminPassword" />
+    <button id="loginBtn">Entrar</button>
+  </div>
+
+  <div id="adminSection" class="form-container" style="display: none;">
+    <h2>Gestión de Indicadores</h2>
+    <label for="adminArea">Área:</label>
+    <input type="text" id="adminArea" />
+    <label for="adminIndicator">Nuevo Indicador:</label>
+    <input type="text" id="adminIndicator" />
+    <button id="addIndicatorBtn">Agregar Indicador</button>
+    <p id="adminMessage"></p>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
+-->
+
+<!--
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Administrador - Programa Anual de Trabajo 2025</title>
+  <link rel="stylesheet" href="PAT.css" />
+  <script defer src="PAT.js"></script>
+</head>
+<body>
+  <h1 class="titulo">Modo Administrador - Programa Anual de Trabajo 2025</h1>
+
+  <div class="contenedor">
+    <input type="password" id="claveAdmin" placeholder="Contraseña para acceder" />
+    <button onclick="activarModoProgramador()">Entrar como Administrador</button>
+
+    <hr>
+
+    <h3>Agregar Indicador</h3>
+
+    <select id="areaNuevoIndicador">
+      <option disabled selected>Seleccione Área</option>
+      <option value="accion">Coordinación de Acción Comunitaria</option>
+      <option value="calidad">Coordinación de Calidad e Información Estratégica</option>
+      <option value="transparencia">Coordinación de Transparencia y Vinculación</option>
+      <option value="salud">Unidad de Atención a la Salud</option>
+      <option value="juridica">Unidad Jurídica</option>
+      <option value="planeacion">Unidad de Planeación Estratégica y Coordinaciones Estatales</option>
+      <option value="infraestructura">Unidad de Infraestructura</option>
+      <option value="finanzas">Unidad de Administración y Finanzas</option>
+    </select>
+
+    <input type="text" id="nuevoIndicador" placeholder="Nombre del nuevo indicador" 
+           oninput="this.value = this.value.replace(/[^a-zA-Z0-9\\s]/g, '')" />
+
+    <button onclick="guardarIndicador()">Guardar Indicador</button>
+
+    <hr>
+
+    <button onclick="eliminarDatos()">Eliminar todos los datos</button>
+    <a href="PAT.html"><button>Volver al Panel Principal</button></a>
+  </div>
+</body>
+</html>
+-->
